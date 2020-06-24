@@ -1,0 +1,3 @@
+<?php
+echo MYSQL_CLIENT_COMPRESS;
+?>

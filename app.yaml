@@ -1,0 +1,33 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /(.*)/
+  static_files: \1/index.html
+  upload: .*/index\.html
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: \1
+  upload: (.*\.css)
+  expiration: "30d"
+- url: /(.*\.js)
+  mime_type: application/javascript
+  static_files: \1
+  upload: (.*\.js)
+  expiration: "30d"
+
+- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|woff2|ttf|otf|eot|svg))$
+  static_files: \1
+  upload: (.*\.(ico|jpg|jpeg|png|gif|woff|woff2|ttf|otf|eot|svg))
+  application_readable: true
+  expiration: "30d"
+
+- url: /(.*)
+  static_files: \1
+  upload: (.*)

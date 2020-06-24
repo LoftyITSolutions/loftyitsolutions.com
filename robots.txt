@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /asp/
+Disallow: /aspnet_client/
+Disallow: /css/
+Disallow: /data/
+Disallow: /html/
+Disallow: /js/
+Disallow: /Log/
+Disallow: /Samples/
+Disallow: /upload/
+Disallow: /usage/
+Disallow: /durga/
+Disallow: /asd/
+
+
